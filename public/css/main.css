@@ -1,0 +1,16 @@
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 768 */
+@media screen and (min-width: 768px) {}
+
+/* 992 */
+@media screen and (min-width: 992px) {}
+
+/* 1200 */
+@media screen and (min-width: 1200px) {}
