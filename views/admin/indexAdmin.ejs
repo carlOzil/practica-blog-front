@@ -1,0 +1,17 @@
+<%- include('../templates/header.ejs') %>
+
+    <main class="p-5">
+        <h1 class="text-end">
+            <%= title %>
+                <%= name %>:
+        </h1>
+        <section class="container p-5">
+            <h3 class="text-center">Tienes permisos de <%= role %>, y tu numero de usuario es <%= uid %>, qué quieres
+                        hacer hoy?</h3>
+                      <a class="btn btn-success" href="" role="button">Crear artículo</a>
+                        <a class="btn btn-success" href="" role="button">Editar artículos</a>
+                        <a class="btn btn-danger" href="" role="button">Eliminar usuarios</a>
+                        <a class="btn btn-secondary" href="/" role="button">Salir</a>
+    </section>
+    </main>
+    <%- include ('../templates/footer.ejs') %>

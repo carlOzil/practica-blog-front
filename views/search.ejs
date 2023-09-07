@@ -1,0 +1,15 @@
+<%- include('templates/header.ejs') %>
+
+<main class="p-5">
+    <h3 class = "text-center"><%= title %></h3>
+    <section class="container">
+<% blogs.forEach(elm => { %>
+         <h1><%= elm.title %></h1>
+                    <p><%= elm.date %></p>
+                    <figure><img src=""></figure>
+                    <p><%= elm.text %></p>
+            <% }) %>
+            <a class="btn btn-secondary" href="/" role="button">Atrás</a>
+        </section>
+</main>
+<%- include ('templates/footer.ejs') %>

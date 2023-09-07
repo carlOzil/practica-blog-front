@@ -1,0 +1,53 @@
+<%- include('../templates/header.ejs') %>
+
+<main class="container p-5">
+    <h1 class="text-center"><%= title %></h1>
+    <a class="btn btn-success" href="" role="button">Crear artículo</a>
+    <a class="btn btn-success" href="/" role="button">Salir</a>
+
+    <h3 class="text-center">Artículos</h3>
+    <table class="table table striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Fecha</th>
+                <th>Bloger</th>
+                <th>Edicion</th>
+                <th>Borrado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% blogs.forEach(elm => { %>
+                <tr>
+                    <td><%= elm.title %></td>
+                    <td><%= elm.date %></td>
+                    <td><%= elm.writer %></td>
+                    <td><a class="btn btn-warning" href="" role="button">Editar</a></td>
+                    <td><a class="btn btn-danger" href="" role="button">Eliminar</a></td>
+                    </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <h3 class="text-center">Blogeros</h3>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Borrado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% publishers.forEach(elm => { %>
+                <tr>
+                    <td><%= elm.name %></td>
+                    <td><%= elm.email %></td>
+                    <td><a class="btn btn-warning" href="" role="button">Editar</a></td>
+                    </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</main>
+
+<%- include('../templates/footer.ejs') %>

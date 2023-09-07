@@ -1,0 +1,16 @@
+<%- include ('templates/header.ejs') %>
+
+    <main class="p-3 text-center">
+        <h1><%= title %></h1>
+       <section class="text-center"> <form action="/logedin" method="post">
+           <ul> <label for="email">Email</label>
+            <input type="email" id="email" name="email"></ul>
+           <ul> <label for="password">password</label>
+            <input type="password" id="password" name="password"></ul>
+            <button class="btn btn-success" type="submit">Iniciar sesión</button>
+            <a class="btn btn-secondary" href="/" role="button">Atrás</a>
+        </form>
+    </section>
+    </main>
+
+    <%- include ('templates/footer.ejs') %>

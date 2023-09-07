@@ -1,0 +1,28 @@
+<%- include ('templates/header.ejs') %>
+
+    <main class="p-5">
+        <h1 class="text-center">
+            <%= title %>
+        </h1>
+        <section class="text-center">
+            <form action="/signedup" method="post">
+
+                <ul><label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </ul>
+                <ul> <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </ul>
+                <ul><label for="password">password</label>
+                    <input type="password" id="password" name="password">
+                </ul>
+                <ul> <label for="passConfirm">Confirma el password:</label>
+                    <input type="password" id="passConfirm" name="passConfirm">
+                </ul>
+                <button class="btn btn-success" type="submit">Crear cuenta</button>
+                <a class="btn btn-secondary" href="/" role="button">Atrás</a>
+        </section>
+        </form>
+    </main>
+
+    <%- include ('templates/footer.ejs') %>

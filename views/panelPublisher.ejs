@@ -1,0 +1,29 @@
+<%- include ('templates/header.ejs')  %>
+
+<main class="container p-5">
+    <h1><%= title %></h1>
+        <a class="btn btn-success" href="" role="button">Crear artículo</a>
+        <a class="btn btn-secondary" href="/" role="button">Salir</a>
+    <h3 class="text-center">Artículos</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Fecha</th>
+                <th>Edicion</th>
+                <th>Borrado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% blogs.forEach(elm => { %>
+                <tr>
+                    <td><%= elm.title %></td>
+                    <td><%= elm.date %></td>
+                    <td><a class="btn btn-warning" href="/" role="button">Editar</a></td>
+                    <td><a class="btn btn-danger" href="/" role="button">Eliminar</a></td>
+                    </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</main>
+<%- include ('templates/footer.ejs')  %>

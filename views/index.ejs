@@ -1,0 +1,18 @@
+<%- include ('templates/header.ejs') %>
+<main class="p-5">
+    <h1 class="text-center"><%= title %></h1>
+    <%- include ('templates/nav.ejs') %>
+    
+            <section class="container">
+                    <% blogs.forEach(elm=> { %>
+                        <article class="p-5 item border border-success-subtle">
+                            <h3><%= elm.title %></h3>
+                            <p><%= elm.date %></p>
+                            <figure><img src=""></figure>
+                            <p><%= elm.description %></p>
+                            <a class="btn btn-success" href="single/<%= elm.title %>" role="button">Leer más</a>
+                        </article>
+                        <% }) %>
+            </section>
+        </main>
+<%- include ('templates/footer.ejs') %>
